@@ -1,0 +1,49 @@
+// COLOR VARIABLES
+$color-primary: #B88E2F;
+
+$color-primary-light-1: #FFF3E3;
+$color-primary-light-2: #F9F1E7;
+$color-primary-light-3: #FAF3EA;
+$color-primary-light-4: #F4F5F7;
+
+$color-secondary: #000000;
+$color-secondary-2: #3A3A3A;
+$color-danger: #E97171;
+
+
+$color-grey-dark-1: #333333;
+$color-grey-dark-2: #242424;
+$color-grey-dark-3: #616161;
+
+$color-grey-light-1: #666666;
+$color-grey-light-2: #9F9F9F;
+$color-grey-light-3: #898989;
+$color-grey-light-4: #B0B0B0;
+
+
+
+// FONT VARIABLES
+$font-primary: "Montserrat", sans-serif;
+$font-display: "Roboto", sans-serif;
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //10px/16px =62.5% =>1rem =10px
+}
+
+body {
+    font-family: $font-primary;
+    color: #000000;
+    font-weight: 400;
+    line-height: 1.6rem;
+}

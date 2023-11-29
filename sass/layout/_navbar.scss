@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.6rem 10rem 2.6rem 5.4rem;
+    align-items: center;
+
+    &__items {
+        display: flex;
+        gap: 0 7.5rem;
+        list-style-type: none;
+    }
+
+    &__item {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+
+        &:hover {
+            color: $color-grey-dark-1;
+            cursor: pointer;
+        }
+    }
+
+    &__details {
+        display: flex;
+        gap: 0 4.73rem;
+
+        &--img {
+            cursor: pointer;
+        }
+    }
+}
