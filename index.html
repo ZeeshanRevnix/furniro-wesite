@@ -1,203 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
-        rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" type="image/png" href="img/furniro-logo.png" />
 
-    <link rel="stylesheet" href="css/home-style.css">
+    <link rel="stylesheet" href="css/home-style.css" />
     <title>Furniro E-commerce website</title>
+  </head>
 
-</head>
-
-<body>
-    <!-- ////////////////////$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$/////////////////// -->
+  <body>
     <!-- ////////////////////$$$$$$$$$----HEADER-SECTION----$$$$$$$$$$$$$$$/////////////////// -->
-    <!-- ////////////////////$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$/////////////////// -->
-    <div class="header">
-        <div class="header__logo">
-            <img src="./img/furniro-logo.png" alt="Furniro logo" class="header__logo--img">
-        </div>
-        <ul class="header__items">
-            <li class=" header__item">Home</li>
-            <li class=" header__item">Shop</li>
-            <li class=" header__item">About</li>
-            <li class=" header__item">Contact</li>
-        </ul>
-        <div class="header__details">
-            <img src="./img/navbar-user.png" alt="navbar user" class="header__details--img">
-            <img src="./img/navbar_search_icon.png" alt="navbar user" class="header__details--img">
-            <img src="./img/nav_heart.png" alt="navbar user" class="header__details--img">
-            <img src="./img/navbar_inventory.png" alt="navbar user" class="header__details--img">
-        </div>
-    </div>
-    <!-- ////////////////////$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$/////////////////// -->
+    <header class="container header">
+      <div class="header__logo">
+        <img
+          src="./img/furniro-logo.png"
+          alt="Furniro logo"
+          class="header__logo--img"
+        />
+      </div>
+      <ul class="header__items">
+        <li class="header__item">Home</li>
+        <li class="header__item">Shop</li>
+        <li class="header__item">About</li>
+        <li class="header__item">Contact</li>
+      </ul>
+      <div class="header__details">
+        <img
+          src="./img/navbar-user.png"
+          alt="navbar user"
+          class="header__details--img"
+        />
+        <img
+          src="./img/navbar_search_icon.png"
+          alt="navbar user"
+          class="header__details--img"
+        />
+        <img
+          src="./img/nav_heart.png"
+          alt="navbar user"
+          class="header__details--img"
+        />
+        <img
+          src="./img/navbar_inventory.png"
+          alt="navbar user"
+          class="header__details--img"
+        />
+      </div>
+    </header>
     <!-- ////////////////////$$$$$$$$$----HERO-SECTION----$$$$$$$$$$$$$$$///////////////////// -->
-    <!-- ////////////////////$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$/////////////////// -->
-    <div class="hero__section">
-        <div class="hero__section-new--arrival">
-            <h6 class="heading-6">New Arrival</h6>
-            <h1 class="heading-big hero__section-h1">Discover Our New Collection</h1>
-            <p class="paragraph1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                luctus
-                nec ullamcorper mattis.</p>
-            <div class="hero__button">
-                <div class="btn__gold buy__btn">BUY Now</div>
-            </div>
+    <!-- <section class="container hero__section">
+      <div class="hero__section-new--arrival">
+        <h6 class="heading-6">New Arrival</h6>
+        <h1 class="heading-big hero__section-h1">
+          Discover Our New Collection
+        </h1>
+        <p class="paragraph1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          tellus, luctus nec ullamcorper mattis.
+        </p>
+        <div class="hero__button">
+          <div class="btn__gold buy__btn">BUY Now</div>
         </div>
-    </div>
+      </div>
+    </section> -->
     <!-- ////////////////////$$$$$$$$$----BROWSE RANGE-SECTION----$$$$$$$$$$$$$$$///////////////////// -->
-    <section class="browse__section">
-        <div class="browse__content">
-            <h2 class="heading-2">Browse The Range</h2>
-            <p class="paragraph1 browse__para1"> Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.</p>
+    <section class="container browse__section mb-large">
+      <div class="browse__content text-center mb-largest">
+        <h2 class="heading-2">Browse The Range</h2>
+        <p class="paragraph1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <div class="browse__cards px-small">
+        <!-- card one -->
+        <div class="browse__card--item">
+          <div class="browse__card--image mb-medium">
+            <img
+              src="./img/main-img1.png"
+              alt="browse range image"
+              class="browse__card--image-img"
+            />
+          </div>
+          <p>Dining</p>
         </div>
-        <div class="browse__cards">
-            <div class="browse__card--item">
-                <img src="./img/main-img1.png" alt="browse range image" class="browse__card--img">
-                <p>Dining</p>
-            </div>
-            <div class="browse__card--item">
-                <img src="./img/main-img2.png" alt="browse range image" class="browse__card--img">
-                <p>Living</p>
-            </div>
-            <div class="browse__card--item">
-                <img src="./img/main-img3.png" alt="browse range image" class="browse__card--img">
-                <p>Bedrooms</p>
-            </div>
+        <!-- card one -->
+
+        <div class="browse__card--item">
+          <div class="browse__card--image mb-medium">
+            <img
+              src="./img/main-img2.png"
+              alt="browse range image"
+              class="browse__card--image-img"
+            />
+          </div>
+          <p>Living</p>
         </div>
+        <!-- card one -->
+
+        <div class="browse__card--item">
+          <div class="browse__card--image mb-medium">
+            <img
+              src="./img/main-img3.png"
+              alt="browse range image"
+              class="browse__card--image-img"
+            />
+          </div>
+          <p>Bedrooms</p>
+        </div>
+      </div>
     </section>
 
     <!-- ////////////////////$$$$$$$$$----Our Products-SECTION----$$$$$$$$$$$$$$$///////////////////// -->
-    <section class="products__section">
-        <div class="products__heading">
-            <h2 class="heading-2">Our Products</h2>
-        </div>
-        <div class="products__cards">
-            <!-- card one -->
-            <div class="product__card">
-                <figure class="product__card-image">
-                    <img src="./img/product_img1.png" alt=" Our product image 1" class="product__card-image--img">
-                    <figcaption class="product__card-image"></figcaption>
-                </figure>
-                <span class="product__card-label">-30%</span>
-                <div class="product__card-content">
-                    <h4 class=" product__card-content--h4 heading-4">Syltherine</h4>
-                    <p class="product__card-para">Stylish cafe chair</p>
-                    <div class="product__card-amount">
-                        <p class="product__card--discount-price">Rp 2.500.000</p>
-                        <p class="product__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
+    <section class="container products__section mb-largest">
+      <div class="products__heading mb-medium text-center">
+        <h2 class="heading-2">Our Products</h2>
+      </div>
+      <div class="products__cards">
+        <!-- card one -->
+        <div class="product__card">
+          <figure class="product__card-image">
+            <img
+              src="./img/product_img3.png"
+              alt=" Our product image 1"
+              class="product__card-image--img"
+            />
+            <figcaption class="product__card-image--figcap">
+              <button class="product__card-image--btn btn__white">
+                Add to cart
+              </button>
+            </figcaption>
+          </figure>
 
-            <!-- card two -->
-            <div class="products__card-content">
-                <img src="./img/product_img2.png" alt=" Our product image 2" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Levisa</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
+          <div class="product__card-content">
+            <span class="product__card-label">-30%</span>
+            <h4 class="product__card-content--h4 heading-4">Syltherine</h4>
+            <p class="product__card-content--para">Stylish cafe chair</p>
+            <div class="product__card-content--amount">
+              <p class="product__card-content--discount">Rp 2.500.000</p>
+              <p class="product__card-content--actual">Rp 3.500.000</p>
             </div>
-            <!-- card three -->
-            <div class="products__card-content">
-                <img src="./img/product_img3.png" alt=" Our product image 3" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Syltherine</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
-            <!-- card four -->
-            <div class="products__card-content">
-                <img src="./img/product_img4.png" alt=" Our product image 4" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Syltherine</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
-            <!-- card five -->
-            <div class="products__card-content">
-                <img src="./img/product_img5.png" alt=" Our product image 5" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Syltherine</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
-            <!-- card six -->
-            <div class="products__card-content">
-                <img src="./img/product_img6.png" alt=" Our product image 6" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Syltherine</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
-            <!-- card seven -->
-            <div class="products__card-content">
-                <img src="./img/product_img7.png" alt=" Our product image 7" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Syltherine</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
-            <!-- card eight -->
-            <div class="products__card-content">
-                <img src="./img/product_img1.png" alt=" Our product image 8" class="products__card-img">
-                <div class="products__card-tag">-30%</div>
-                <div class="products__card-detail">
-                    <h4 class="heading-4">Syltherine</h4>
-                    <p class="products__card-para">Stylish cafe chair</p>
-                    <div class="products__card-amount">
-                        <p class="products__card--discount-price">Rp 2.500.000</p>
-                        <p class="products__card--actual-price">Rp 3.500.000</p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
 
+        <!-- card two -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img2.png"
+            alt=" Our product image 2"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Levisa</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card three -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img3.png"
+            alt=" Our product image 3"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Syltherine</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card four -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img4.png"
+            alt=" Our product image 4"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Syltherine</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card five -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img5.png"
+            alt=" Our product image 5"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Syltherine</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card six -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img6.png"
+            alt=" Our product image 6"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Syltherine</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card seven -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img7.png"
+            alt=" Our product image 7"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Syltherine</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card eight -->
+        <div class="products__card-content">
+          <img
+            src="./img/product_img1.png"
+            alt=" Our product image 8"
+            class="products__card-img"
+          />
+          <div class="products__card-tag">-30%</div>
+          <div class="products__card-detail">
+            <h4 class="heading-4">Syltherine</h4>
+            <p class="products__card-para">Stylish cafe chair</p>
+            <div class="products__card-amount">
+              <p class="products__card--discount-price">Rp 2.500.000</p>
+              <p class="products__card--actual-price">Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-
-
-
-
-
-</body>
-
+  </body>
 </html>

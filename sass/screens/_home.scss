@@ -1,192 +1,165 @@
 .hero__section {
-    background-image: url(../../img/Hero-bg.png);
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    //
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(8, 10rem);
+  background-image: url(../../img/Hero-bg.png);
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  //
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 10rem);
 
-    &-new--arrival {
-        margin-top: 5rem;
-        margin-left: 2rem;
-        grid-row: 2 / span 4;
-        grid-column: 9/ span 3;
-        background-color: $color-primary-light-1;
-        width: 64.3rem;
-        height: 44.3rem;
-        border-radius: 1rem;
-        padding: 6.2rem 4.1rem 3.7rem;
-    }
+  &-new--arrival {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    grid-row: 2 / span 4;
+    grid-column: 9 / span 3;
+    background-color: $color-primary-light-1;
+    width: 64.3rem;
+    height: 44.3rem;
+    border-radius: 1rem;
+    padding: 6.2rem 4.1rem 3.7rem;
+  }
 
-    &-h1 {
-        margin-bottom: 1.7rem;
-    }
-
+  &-h1 {
+    margin-bottom: 1.7rem;
+  }
 }
 
 .buy__btn {
-    margin-top: 4.6rem;
+  margin-top: 4.6rem;
 }
 
 ////////////////////$$$$$$$$$----BROWSE RANGE-SECTION----$$$$$$$$$$$$$$$/////////////////////
 .browse {
-    &__section {
-        padding: 2.8rem 13.1rem;
-    }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38.1rem, 1fr));
+    gap: 2rem;
+  }
 
-    &__content {
-        text-align: center;
-    }
+  &__card--item {
+    text-align: center;
+    font-size: 2.4rem;
+  }
 
-    &__para1 {
-        margin-bottom: 6.22rem;
-    }
-
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(38.1rem, 1fr));
-        gap: 2rem;
-    }
-
-    &__card--item {
-        text-align: center;
-        font-size: 2.4rem;
-    }
-
-    &__card--img {
-        margin-bottom: 2rem;
-        width: 100%;
-        height: 48rem;
-    }
+  &__card--image-img {
+    max-width: 38.1rem;
+    height: 48rem;
+  }
 }
 
 ////////////////////$$$$$$$$$----Our Products-SECTION----$$$$$$$$$$$$$$$/////////////////////
 
 .products {
-
-    &__section {
-        padding: 2.8rem 10.2rem;
-    }
-
-    &__heading {
-        text-align: center;
-        margin-bottom: 3.2rem;
-    }
-
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(28.5rem, 1fr));
-        gap: 3.2rem;
-    }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28.5rem, 1fr));
+    gap: 3.2rem;
+  }
 }
 
-.products__card {
+.product__card {
+  position: relative;
 
+  &-image--img {
+    max-width: 28.5rem;
+    height: 30.1rem;
+  }
 
-    &-content {
-        width: 100%;
-        height: 44.6rem;
-        position: relative;
-        background-color: $color-primary-light-4;
+  &-content {
+    background-color: $color-primary-light-4;
+    width: 28.5rem;
+    height: 14.5rem;
+    padding: 1.6rem;
+
+    &--para {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+      color: $color-grey-light-3;
+    }
+    &--amount {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.8rem;
+    }
+    &--discount {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 3rem;
+      color: $color-secondary-2;
+      margin: auto 0;
     }
 
-    &-img {
-        width: 100%;
-        height: 30.1rem;
-
+    &--actual {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      color: $color-grey-light-4;
+      margin: auto 0;
     }
+  }
 
-    &-tag {
-        position: absolute;
-        top: 2.4rem;
-        right: 2.4rem;
-        background-color: $color-danger;
-        color: #ffffff;
-        width: 4.2rem;
-        height: 4.2rem;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  &-label {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    background-color: $color-danger;
+    color: #ffffff;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  //shape
+  //shape
+  &-image {
+    width: 28.5rem;
+    height: 30.1rem;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      clip-path: (100% at 50% 50%);
+      -webkit-clip-path: circle(100% at 50% 50%);
+      -webkit-shape-outside: circle(100% at 50% 50%);
+      shape-outside: circle(100% at 50% 50%);
     }
-
-    &-detail {
-        padding: 1.6rem;
+    //
+    &--img {
+      width: 28.5rem;
+      height: 30.1rem;
+      //   transform: translateX(-4rem) scale(0);
+      backface-visibility: hidden;
+      transition: all 0.5s;
     }
-
-    &-para {
-        font-size: 1.6rem;
-        padding: .8rem 0;
-        color: $color-grey-light-3;
+    // captions
+    &--figcap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      color: $color-secondary;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.5s;
+      backface-visibility: hidden;
     }
+  }
 
-    &-amount {
-        display: flex;
-        justify-content: space-between;
-        margin-top: .8rem;
-    }
+  //   &:hover
 
-    &--discount-price {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 3rem;
-        color: $color-secondary-2;
-        margin: auto 0;
-    }
-
-    &--actual-price {
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 2.4rem;
-        color: $color-grey-light-4;
-        margin: auto 0;
-    }
-
-
-    &-shape {
-        width: 15rem;
-        height: 20rem;
-        float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        transform: translateX(-8rem) skewX(12deg);
-        position: relative;
-    }
-
-    &-shape:hover {
-        cursor: pointer;
-
-    }
-
-    &-caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 20%);
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1.7rem;
-        text-align: center;
-        opacity: 0;
-        transition: all .5s;
-        backface-visibility: hidden;
-    }
-
-
-    &:hover &-caption {
-        cursor: pointer;
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-
-    &:hover &-img {
-        transform: translateX(-4rem) scale(1);
-        filter: blur(3px) brightness(80%);
-        cursor: pointer;
-    }
+  &-image--figcap {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &-image--img {
+    filter: blur(1px) brightness(50%);
+    background-color: $color-secondary-2;
+  }
 }
