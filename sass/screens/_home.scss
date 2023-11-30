@@ -2,22 +2,25 @@
   background-image: url(../../img/Hero-bg.png);
   background-size: cover;
   background-position: center;
-  height: 70vh;
-  //
-  display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(8, 10rem);
+
+  &--cover {
+    padding: 15.3rem 0 8rem 0;
+    display: flex;
+    gap: 5rem;
+    justify-content: end;
+    align-items: center;
+  }
 
   &-new--arrival {
-    margin-top: 5rem;
-    margin-left: 2rem;
-    grid-row: 2 / span 4;
-    grid-column: 9 / span 3;
     background-color: $color-primary-light-1;
     width: 64.3rem;
     height: 44.3rem;
     border-radius: 1rem;
-    padding: 6.2rem 4.1rem 3.7rem;
+    padding: 6rem 4rem;
+
+    &--btn {
+      margin-top: 4.6rem;
+    }
   }
 
   &-h1 {
@@ -25,15 +28,12 @@
   }
 }
 
-.buy__btn {
-  margin-top: 4.6rem;
-}
 
 ////////////////////$$$$$$$$$----BROWSE RANGE-SECTION----$$$$$$$$$$$$$$$/////////////////////
 .browse {
   &__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(38.1rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 2rem;
   }
 
@@ -43,7 +43,8 @@
   }
 
   &__card--image-img {
-    max-width: 38.1rem;
+    width: 100%;
+    ;
     height: 48rem;
   }
 }
@@ -60,15 +61,15 @@
 
 .product__card {
   position: relative;
+  overflow: hidden;
 
-  &-image--img {
-    max-width: 28.5rem;
-    height: 30.1rem;
+  &:hover &-label {
+    display: none;
   }
 
   &-content {
     background-color: $color-primary-light-4;
-    width: 28.5rem;
+    width: 100%;
     height: 14.5rem;
     padding: 1.6rem;
 
@@ -77,11 +78,13 @@
       padding: 0.8rem 0;
       color: $color-grey-light-3;
     }
+
     &--amount {
       display: flex;
       justify-content: space-between;
       margin-top: 0.8rem;
     }
+
     &--discount {
       font-size: 2rem;
       font-weight: 600;
@@ -113,53 +116,187 @@
     align-items: center;
     justify-content: center;
   }
-  //shape
-  //shape
-  &-image {
-    width: 28.5rem;
-    height: 30.1rem;
-    background-color: transparent;
-    position: relative;
-    overflow: hidden;
 
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-      clip-path: (100% at 50% 50%);
-      -webkit-clip-path: circle(100% at 50% 50%);
-      -webkit-shape-outside: circle(100% at 50% 50%);
-      shape-outside: circle(100% at 50% 50%);
-    }
-    //
-    &--img {
-      width: 28.5rem;
-      height: 30.1rem;
-      //   transform: translateX(-4rem) scale(0);
-      backface-visibility: hidden;
-      transition: all 0.5s;
-    }
-    // captions
+
+  &-image {
+    width: 100%;
+    height: 30rem;
+    transition: all 0.5s;
+
     &--figcap {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, 20%);
-      color: $color-secondary;
-      text-transform: uppercase;
-      font-size: 1.7rem;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      transform: translate(-50%, 50%);
       text-align: center;
       opacity: 0;
-      transition: all 0.5s;
-      backface-visibility: hidden;
+      transition: .5s ease;
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  //   &:hover
-
-  &-image--figcap {
-    opacity: 1;
-    transform: translate(-50%, -50%);
+  &:hover {
+    transition: all .5s;
   }
-  &:hover &-image--img {
-    filter: blur(1px) brightness(50%);
-    background-color: $color-secondary-2;
+
+  &:hover &-image--figcap {
+    opacity: 1;
+    transition: all .5s;
+    transform: translate(-50%, -50%);
+
+
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.4rem;
+    gap: 0 2rem;
+  }
+}
+
+////////////////////$$$$$$$$$----Our Products-SECTION----$$$$$$$$$$$$$$$/////////////////////
+
+.room__section {
+  background-color: $color-cream;
+  padding: 4.4rem 0rem;
+
+  &--cover {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--content {
+    margin-left: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-heading {
+      width: 42.2rem;
+      height: 9.6rem;
+      margin-bottom: .7rem;
+    }
+
+    &-paragraph {
+      width: 36.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  &--slider {
+
+    &-content {
+      display: flex;
+      gap: 2.4rem;
+      padding: 0 4.6rem;
+    }
+
+    &-images {
+      position: relative;
+    }
+
+    &-img {
+      width: 40.4rem;
+      height: 58.2rem;
+    }
+
+    &-detail {
+      display: flex;
+      align-items: end;
+      position: absolute;
+      bottom: 5rem;
+      left: 2.5rem;
+    }
+
+    &-label {
+      background-color: #FFFFFF;
+      padding: 3.2rem;
+      opacity: .72;
+    }
+
+    &-heading3 {
+      margin-top: .8rem;
+    }
+
+    &-arrow {
+      background-color: $color-primary;
+      padding: 1.8rem 1.5rem;
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+
+    &-image-2 {
+      width: 37.2rem;
+      height: 48.6rem;
+
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+
+
+  }
+
+  &--indicator {
+    display: flex;
+  }
+
+  &-radio--group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &--button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+
+  }
+
+  &-radio-input {
+    opacity: 0;
+  }
+
+  &-radio-input:checked~&__radio-label &__radio-button::after {
+    opacity: 1;
   }
 }

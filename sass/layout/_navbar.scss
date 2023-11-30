@@ -1,8 +1,10 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 2.6rem 10rem 2.6rem 5.4rem;
-    align-items: center;
+    &__cover {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+    }
 
     &__items {
         display: flex;
@@ -15,8 +17,13 @@
         font-weight: 600;
         line-height: 2.4rem;
 
-        &:hover {
-            color: $color-grey-dark-1;
+        &--link {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        &--link:hover {
+            color: $color-primary;
             cursor: pointer;
         }
     }
