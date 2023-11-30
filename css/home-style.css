@@ -358,20 +358,25 @@ body {
       width: 100%;
       height: 100%; }
   .room__section--indicator {
-    display: flex; }
-  .room__section-radio--group {
-    width: 49%;
+    display: flex;
+    position: absolute; }
+  .room__section-radio-group {
     display: inline-block; }
-  .room__section--button {
+  .room__section-radio-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+    font-size: 2rem; }
+  .room__section-radio--button {
     height: 3rem;
     width: 3rem;
-    border: 5px solid #B88E2F;
+    border: 2px solid #B88E2F;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
     left: 0;
     top: -.4rem; }
-    .room__section--button::after {
+    .room__section-radio--button::after {
       content: "";
       display: block;
       height: 1.3rem;
@@ -384,7 +389,11 @@ body {
       background-color: #B88E2F;
       opacity: 0;
       transition: opacity .2s; }
-  .room__section-radio-input {
-    opacity: 0; }
-  .room__section-radio-input:checked ~ .room__section__radio-label .room__section__radio-button::after {
-    opacity: 1; }
+
+.room__section-radio--input {
+  opacity: 0; }
+
+.room__section-radio--input:checked ~,
+.room__section--radio-label,
+.room__section-radio--button::after {
+  opacity: 1; }
