@@ -28,7 +28,6 @@
   }
 }
 
-
 ////////////////////$$$$$$$$$----BROWSE RANGE-SECTION----$$$$$$$$$$$$$$$/////////////////////
 .browse {
   &__cards {
@@ -44,7 +43,6 @@
 
   &__card--image-img {
     width: 100%;
-    ;
     height: 48rem;
   }
 }
@@ -117,7 +115,6 @@
     justify-content: center;
   }
 
-
   &-image {
     width: 100%;
     height: 30rem;
@@ -133,7 +130,7 @@
       transform: translate(-50%, 50%);
       text-align: center;
       opacity: 0;
-      transition: .5s ease;
+      transition: 0.5s ease;
       -ms-transform: translate(-50%, -50%);
       text-align: center;
       display: flex;
@@ -150,15 +147,13 @@
   }
 
   &:hover {
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &:hover &-image--figcap {
     opacity: 1;
-    transition: all .5s;
+    transition: all 0.5s;
     transform: translate(-50%, -50%);
-
-
   }
 
   &-links {
@@ -182,7 +177,7 @@
   }
 
   &--content {
-    margin-left: 17rem;
+    // margin-left: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,7 +185,7 @@
     &-heading {
       width: 42.2rem;
       height: 9.6rem;
-      margin-bottom: .7rem;
+      margin-bottom: 0.7rem;
     }
 
     &-paragraph {
@@ -200,7 +195,6 @@
   }
 
   &--slider {
-
     &-content {
       display: flex;
       gap: 2.4rem;
@@ -225,13 +219,13 @@
     }
 
     &-label {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       padding: 3.2rem;
-      opacity: .72;
+      opacity: 0.72;
     }
 
     &-heading3 {
-      margin-top: .8rem;
+      margin-top: 0.8rem;
     }
 
     &-arrow {
@@ -250,66 +244,74 @@
         height: 100%;
       }
     }
-
-
-
-
   }
 
-  &--indicator {
-    display: flex;
+  &-radio-group {
+    margin-top: 4.8rem;
+    display: inline-block;
+  }
+
+  &-radio-label {
+    cursor: pointer;
+    font-size: 1.6rem;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &-radio-button {
+    height: 2.7rem;
+    width: 2.7rem;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
     position: absolute;
-  }
+    left: -1rem;
+    top: 0;
 
-  &-radio {
-
-    &-group {
-      display: inline-block;
-    }
-
-    &-label {
-      cursor: pointer;
-      position: relative;
-      padding-left: 4.5rem;
-      font-size: 2rem;
-    }
-
-    &--button {
-      height: 3rem;
-      width: 3rem;
-      border: 2px solid $color-primary;
+    &::after {
+      content: "";
+      display: block;
+      height: 1.1rem;
+      width: 1.1rem;
       border-radius: 50%;
-      display: inline-block;
       position: absolute;
-      left: 0;
-      top: -.4rem;
-
-      &::after {
-        content: "";
-        display: block;
-        height: 1.3rem;
-        width: 1.3rem;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: $color-primary;
-        opacity: 0;
-        transition: opacity .2s;
-      }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
     }
+  }
 
+  &-radio-input {
+    opacity: 0;
+  }
 
+  &-radio-input:checked ~ &-radio-label &-radio-button::after {
+    opacity: 1;
   }
 }
 
-.room__section-radio--input {
-  opacity: 0;
-}
+////////////////////$$$$$$$$$---furniture__section----$$$$$$$$$$$$$$$/////////////////////
 
-.room__section-radio--input:checked~,
-.room__section--radio-label,
-.room__section-radio--button::after {
-  opacity: 1;
+.furniture__section {
+  &--gallery {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 5vw);
+    gap: 1.6rem;
+
+    &-item-1 {
+      grid-row: 1 / span 3;
+      columns: 1 /1;
+    }
+
+    &-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
 }
