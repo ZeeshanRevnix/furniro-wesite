@@ -283,7 +283,7 @@ body {
       transform: translate(-50%, 50%);
       text-align: center;
       opacity: 0;
-      transition: 0.5s ease;
+      transition: .5s ease;
       -ms-transform: translate(-50%, -50%);
       text-align: center;
       display: flex;
@@ -295,10 +295,10 @@ body {
       height: 100%;
       object-fit: cover; }
   .product__card:hover {
-    transition: all 0.5s; }
+    transition: all .5s; }
   .product__card:hover .product__card-image--figcap {
     opacity: 1;
-    transition: all 0.5s;
+    transition: all .5s;
     transform: translate(-50%, -50%); }
   .product__card-links {
     display: flex;
