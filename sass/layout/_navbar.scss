@@ -4,12 +4,21 @@
         justify-content: space-between;
         align-items: center;
         padding: 2rem 0;
-    }
 
-    &__items {
-        display: flex;
-        gap: 0 7.5rem;
-        list-style-type: none;
+        &-items {
+            display: flex;
+            gap: 0 7.5rem;
+            list-style-type: none;
+        }
+
+        &-details {
+            display: flex;
+            gap: 0 4.73rem;
+
+            &--img {
+                cursor: pointer;
+            }
+        }
     }
 
     &__item {
@@ -24,15 +33,6 @@
 
         &--link:hover {
             color: $color-primary;
-            cursor: pointer;
-        }
-    }
-
-    &__details {
-        display: flex;
-        gap: 0 4.73rem;
-
-        &--img {
             cursor: pointer;
         }
     }

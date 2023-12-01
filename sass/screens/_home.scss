@@ -28,6 +28,7 @@
   }
 }
 
+
 ////////////////////$$$$$$$$$----BROWSE RANGE-SECTION----$$$$$$$$$$$$$$$/////////////////////
 .browse {
   &__cards {
@@ -43,6 +44,7 @@
 
   &__card--image-img {
     width: 100%;
+    ;
     height: 48rem;
   }
 }
@@ -115,6 +117,7 @@
     justify-content: center;
   }
 
+
   &-image {
     width: 100%;
     height: 30rem;
@@ -130,7 +133,7 @@
       transform: translate(-50%, 50%);
       text-align: center;
       opacity: 0;
-      transition: 0.5s ease;
+      transition: .5s ease;
       -ms-transform: translate(-50%, -50%);
       text-align: center;
       display: flex;
@@ -147,13 +150,15 @@
   }
 
   &:hover {
-    transition: all 0.5s;
+    transition: all .5s;
   }
 
   &:hover &-image--figcap {
     opacity: 1;
-    transition: all 0.5s;
+    transition: all .5s;
     transform: translate(-50%, -50%);
+
+
   }
 
   &-links {
@@ -166,7 +171,6 @@
 }
 
 ////////////////////$$$$$$$$$----Our Products-SECTION----$$$$$$$$$$$$$$$/////////////////////
-
 .room__section {
   background-color: $color-cream;
   padding: 4.4rem 0rem;
@@ -177,7 +181,7 @@
   }
 
   &--content {
-    // margin-left: 17rem;
+    margin-left: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -205,16 +209,31 @@
       position: relative;
     }
 
-    &-img {
+    &-image1 {
       width: 40.4rem;
       height: 58.2rem;
+
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-image2 {
+      width: 37.2rem;
+      height: 48.6rem;
+
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &-detail {
       display: flex;
       align-items: end;
       position: absolute;
-      bottom: 5rem;
+      bottom: 10rem;
       left: 2.5rem;
     }
 
@@ -246,60 +265,61 @@
     }
   }
 
-  &-radio-group {
-    margin-top: 4.8rem;
-    display: inline-block;
-  }
+  &-radio {
+    &-group {
+      margin-top: 4.8rem;
+      display: inline-block;
+    }
 
-  &-radio-label {
-    cursor: pointer;
-    font-size: 1.6rem;
-    position: relative;
-    padding-left: 4.5rem;
-  }
+    &-label {
+      cursor: pointer;
+      font-size: 1.6rem;
+      position: relative;
+      padding-left: 4.5rem;
+    }
 
-  &-radio-button {
-    height: 2.7rem;
-    width: 2.7rem;
-    border: 1px solid $color-primary;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    left: -1rem;
-    top: 0;
-
-    &::after {
-      content: "";
-      display: block;
-      height: 1.1rem;
-      width: 1.1rem;
+    &-button {
+      height: 2.7rem;
+      width: 2.7rem;
+      border: 1px solid $color-primary;
       border-radius: 50%;
+      display: inline-block;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: $color-primary;
+      left: -1rem;
+      top: 0;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1.1rem;
+        width: 1.1rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-primary;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    }
+
+    &-input {
       opacity: 0;
-      transition: opacity 0.2s;
     }
   }
 
-  &-radio-input {
-    opacity: 0;
-  }
-
-  &-radio-input:checked ~ &-radio-label &-radio-button::after {
+  &-radio-input:checked~&-radio-label &-radio-button::after {
     opacity: 1;
   }
 }
 
 ////////////////////$$$$$$$$$---furniture__section----$$$$$$$$$$$$$$$/////////////////////
-
 .furniture__section {
   &--gallery {
     display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(15, 5vw);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 1.6rem;
 
     &-item-1 {
@@ -307,6 +327,8 @@
       columns: 1 /1;
     }
 
+
+    
     &-img {
       object-fit: cover;
       width: 100%;
